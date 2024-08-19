@@ -11,7 +11,7 @@ export default function ProjectCard({
   url,
 }: IProjectProps) {
   return (
-    <div className="flex gap-3 bg-white rounded-xl p-2">
+    <div className="flex gap-3 bg-primary rounded-xl p-2">
       <Image
         src={icon}
         alt={name}

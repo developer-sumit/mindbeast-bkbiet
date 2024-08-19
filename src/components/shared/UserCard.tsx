@@ -55,7 +55,7 @@ export default function UserCard({
 }: IUserCardProps) {
   return (
     <Link href={`/club-members/${name.toLowerCase().replace(/\s/g, "-")}`}>
-      <div className="flex bg-white border border-gray-400 gap-2 p-3 rounded-3xl">
+      <div className="flex bg-primary border border-gray-600 gap-2 p-3 rounded-3xl">
         <Image
           src={avatar}
           alt={name.toLowerCase().replace(/\s/g, "-") + "-avatar"}
@@ -64,10 +64,10 @@ export default function UserCard({
           className="rounded-3xl h-full aspect-square object-cover"
         />
         <div className="flex flex-col">
-          <p className="font-bold">{name}</p>
-          <p className="text-sm font-medium text-primary">{role}</p>
+          <p className="font-bold text-white">{name}</p>
+          <p className="text-sm font-medium text-gray-400">{role}</p>
           {socialLinks && (
-            <div className="flex mt-[6px]">
+            <div className="flex mt-[6px] gap-2">
               {Object.entries(socialLinks || {}).map(
                 ([key, value], index) =>
                   key.toLowerCase() in ICONS && (
@@ -76,7 +76,7 @@ export default function UserCard({
                       target="_blank"
                       className={`text-sm ${
                         ICONS[key.toLowerCase()].color
-                      } p-2 rounded-lg`}
+                      } p-1 rounded-xl bg-gray-200`}
                       href={value}
                     >
                       {ICONS[key.toLowerCase()].icon}

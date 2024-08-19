@@ -21,7 +21,7 @@ export default function ClubMembers() {
     <div className="flex flex-col gap-8 min-h-screen">
       {Object.entries(MEMBERS).map(([title, members], index) => (
         <div key={index} className="w-[min(100%,1100px)] mx-auto">
-          <p className="mb-2 font-bold">{title.toUpperCase()}</p>
+          <p className="mb-2 font-bold text-white">{title.toUpperCase()}</p>
           <div className="grid grid-cols-2 max-md:grid-cols-1 gap-3">
             {members.map((item: IUserCardProps, innerIndex) =>
               item.socialLinks ? (

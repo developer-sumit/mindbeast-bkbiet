@@ -82,13 +82,13 @@ export default function MemberProfile({
           className="rounded-3xl w-20 aspect-square"
         />
         <div>
-          <h1 className="text-xl font-bold">{user.name}</h1>
-          <p className="font-medium text-gray-500">{user.role}</p>
+          <h1 className="text-xl font-bold text-white">{user.name}</h1>
+          <p className="font-medium text-gray-400">{user.role}</p>
         </div>
       </div>
 
       {user.socialLinks && (
-        <div className="flex gap-2 bg-white border border-gray-300 mx-auto w-fit p-2 px-5 rounded-full">
+        <div className="flex gap-2 bg-gray-200 mx-auto w-fit p-2 px-5 rounded-full shadow-[4px_4px_10px_rgba(255,255,255,0.2)]">
           {Object.entries(user.socialLinks).map(
             ([key, value], index) =>
               key.toLowerCase() in ICONS && (
